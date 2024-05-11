@@ -4,6 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Spin Wheel Project</title>
+	
+	<script src="Build/UnityLoader.js"></script>
+	<!-- Unity WebGL sharing script -->
+	<script>
+     // Unity JavaScript interop function for sharing
+     function ShareText(text) {
+         navigator.share({
+             title: 'Hoo gea Implemet',
+             text: 'Spin Wheel',
+             //url: window.location.href
+             url: 'https://forum.unity.com/threads/record-and-share-game-play-video-in-webgl.368552/'
+         }).then(() => {
+             window.alert('Thanks for sharing!');
+         })
+             .catch(err => {
+                 window.alert(Couldn't share because of, err);
+             });
+     }
+	</script>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=540 height=960 tabindex="-1" style="width: 540px; height: 960px; background: url('Build/SpinWheel_WebGl.jpg') center / cover"></canvas>
