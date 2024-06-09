@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Spin Wheel Project</title>
-    <script src="Build/UnityLoader.js"></script>
-    <!-- Unity WebGL sharing script -->
-    <script>
-        //config.matchWebGLToCanvasSize = true;
-        // Unity JavaScript interop function for sharing
-        function ShareText(text) {
-            navigator.share({
-                title: 'Hoo gea Implemet',
-                text: 'Spin Wheel',
-                //url: window.location.href
-                url: 'https://forum.unity.com/threads/record-and-share-game-play-video-in-webgl.368552/'
-            }).then(() => {
-                window.alert('Thanks for sharing!');
-            })
-                .catch(err => {
-                    window.alert(`Couldn't share because of`, err);
-                });
-        }
-    </script>
-</head>
+  </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=540 height=960 tabindex="-1" style="width: 540px; height: 960px; background: #231F20"></canvas>
-    <script src="Build/Build/Build 2.loader.js"></script>
+    <canvas id="unity-canvas" width=540 height=960 tabindex="-1" style="width: 540px; height: 960px; background: url('Build/Build 3.jpg') center / cover"></canvas>
+    <script src="Build/Build 3.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -44,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Build/Build 2.data",
-        frameworkUrl: "Build/Build/Build 2.framework.js",
-        codeUrl: "Build/Build/Build 2.wasm",
+        dataUrl: "Build/Build 3.data",
+        frameworkUrl: "Build/Build 3.framework.js",
+        codeUrl: "Build/Build 3.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Spin Wheel Project",
